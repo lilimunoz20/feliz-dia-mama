@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Feliz Día de las Madres 💛</title>
 
@@ -28,111 +28,164 @@
   --border:rgba(212,168,75,.22);
 }
 
+html,body{
+  width:100%;
+  min-height:100%;
+}
+
 body{
   background:var(--bg);
+
   min-height:100vh;
+
   display:flex;
   justify-content:center;
   align-items:flex-start;
+
   overflow-x:hidden;
   overflow-y:auto;
+
   padding:40px 20px;
+
   font-family:'Cormorant Garamond', serif;
+
   position:relative;
+
+  -webkit-overflow-scrolling:touch;
 }
 
 /* Background */
 
 .bg{
-  position:fixed;
+  position:absolute;
   inset:0;
+
   background:
   radial-gradient(circle at top left, rgba(212,168,75,.12), transparent 35%),
   radial-gradient(circle at bottom right, rgba(56,217,192,.10), transparent 35%);
+
   z-index:0;
 }
 
-/* Floating lights */
+/* Floating Lights */
 
 .light{
-  position:fixed;
+  position:absolute;
+
   width:6px;
   height:6px;
+
   border-radius:50%;
-  background:rgba(255,255,255,.6);
+
+  background:rgba(255,255,255,.5);
+
+  opacity:.35;
+
   animation:float 10s linear infinite;
-  opacity:.4;
 }
 
 @keyframes float{
+
   from{
     transform:translateY(100vh);
   }
+
   to{
     transform:translateY(-120vh);
   }
+
 }
 
 /* Card */
 
 .card{
+
   position:relative;
   z-index:2;
+
   width:min(650px,95vw);
+
   margin:40px 0;
+
   background:rgba(13,16,32,.96);
+
   border:1px solid var(--border);
+
   border-radius:16px;
+
   padding:55px 38px;
+
   text-align:center;
-  backdrop-filter:blur(16px);
 
   box-shadow:
   0 20px 80px rgba(0,0,0,.65),
   0 0 25px rgba(212,168,75,.08);
+
 }
 
 /* Chip */
 
 .chip{
+
   display:inline-block;
+
   margin-bottom:24px;
+
   padding:8px 18px;
+
   border-radius:40px;
 
   color:var(--teal);
+
   border:1px solid rgba(56,217,192,.25);
 
   font-size:.72rem;
+
   letter-spacing:.18em;
+
   font-family:'Raleway', sans-serif;
+
 }
 
 /* Title */
 
 h1{
+
   color:var(--ivory);
+
   font-family:'Cinzel Decorative', serif;
+
   font-size:clamp(1.5rem,5vw,2.4rem);
+
   line-height:1.4;
+
   text-shadow:0 0 20px rgba(212,168,75,.3);
+
 }
 
 h1 em{
+
   display:block;
+
   margin-top:14px;
+
   color:var(--gold2);
 
   font-style:italic;
+
   font-size:.52em;
+
   font-family:'Cormorant Garamond', serif;
+
 }
 
 /* Separator */
 
 .sep{
+
   width:70%;
   height:1px;
+
   margin:30px auto;
 
   background:
@@ -142,56 +195,77 @@ h1 em{
     rgba(212,168,75,.5),
     transparent
   );
+
 }
 
 /* Quote */
 
 .quote-box{
+
   background:rgba(212,168,75,.04);
+
   border-left:2px solid rgba(212,168,75,.45);
 
   padding:24px;
+
   border-radius:0 8px 8px 0;
 
   text-align:left;
+
   margin-bottom:34px;
+
 }
 
 .quote{
+
   color:var(--ivory);
+
   font-size:1.1rem;
+
   line-height:1.9;
+
   font-style:italic;
+
 }
 
 .author{
+
   margin-top:14px;
 
   color:var(--gold);
+
   font-size:.72rem;
+
   letter-spacing:.18em;
 
   font-family:'Raleway', sans-serif;
+
 }
 
 /* Message */
 
 .message-title{
+
   margin-bottom:18px;
 
   color:var(--gold2);
 
   font-size:1.6rem;
+
   font-family:'Cinzel Decorative', serif;
+
 }
 
 .message{
+
   color:var(--soft);
 
   text-align:left;
+
   line-height:2.1;
 
   font-size:1.12rem;
+
 }
 
 .message strong{
@@ -209,6 +283,7 @@ h1 em{
 }
 
 .signature{
+
   margin-top:22px;
 
   text-align:center;
@@ -216,18 +291,23 @@ h1 em{
   color:rgba(212,168,75,.72);
 
   font-style:italic;
+
   font-size:1.05rem;
+
 }
 
 /* Button */
 
 button{
+
   margin-top:36px;
 
   border:none;
+
   cursor:pointer;
 
   padding:17px 36px;
+
   border-radius:40px;
 
   background:
@@ -241,13 +321,17 @@ button{
   color:#060810;
 
   font-family:'Raleway', sans-serif;
+
   font-weight:700;
+
   letter-spacing:.14em;
+
   text-transform:uppercase;
 
   box-shadow:0 0 30px rgba(212,168,75,.35);
 
   transition:.25s;
+
 }
 
 button:hover{
@@ -257,41 +341,53 @@ button:hover{
 /* Footer */
 
 .footer{
+
   margin-top:30px;
 
   color:rgba(212,168,75,.28);
 
   letter-spacing:.22em;
+
   font-size:.62rem;
 
   font-family:'Raleway', sans-serif;
+
 }
 
 /* Celebration */
 
 #celebration{
-  position:fixed;
+
+  position:absolute;
+
   inset:0;
 
   background:rgba(5,6,18,.94);
 
   display:none;
+
   justify-content:center;
   align-items:center;
   flex-direction:column;
 
   z-index:50;
+
   overflow:hidden;
+
 }
 
 /* Cake */
 
 .cake{
+
   font-size:120px;
+
   animation:cakeFloat 2s ease-in-out infinite;
+
 }
 
 @keyframes cakeFloat{
+
   0%,100%{
     transform:translateY(0);
   }
@@ -299,11 +395,13 @@ button:hover{
   50%{
     transform:translateY(-10px);
   }
+
 }
 
-/* Celebration text */
+/* Celebration Text */
 
 .celebration-text{
+
   margin-top:18px;
 
   color:var(--gold2);
@@ -311,23 +409,29 @@ button:hover{
   text-align:center;
 
   font-family:'Cinzel Decorative', serif;
+
   font-size:clamp(1.5rem,5vw,2.8rem);
 
   text-shadow:0 0 24px rgba(212,168,75,.45);
+
 }
 
 .sub{
+
   margin-top:12px;
 
   color:var(--ivory);
 
   font-size:1.15rem;
+
   font-style:italic;
+
 }
 
 /* Fireworks */
 
 .firework{
+
   position:absolute;
 
   width:7px;
@@ -336,6 +440,7 @@ button:hover{
   border-radius:50%;
 
   animation:explode 1.6s ease-out forwards;
+
 }
 
 @keyframes explode{
@@ -351,6 +456,7 @@ button:hover{
     translate(var(--x), var(--y))
     scale(0);
   }
+
 }
 
 /* Mobile */
@@ -384,6 +490,7 @@ button:hover{
 <!-- Floating lights -->
 
 <script>
+
 for(let i=0;i<22;i++){
 
   const light=document.createElement('div');
@@ -399,7 +506,9 @@ for(let i=0;i<22;i++){
   Math.random()*5+'s';
 
   document.body.appendChild(light);
+
 }
+
 </script>
 
 <!-- Card -->
@@ -445,11 +554,13 @@ for(let i=0;i<22;i++){
 
     Una palabra corta para el significado tan
     <strong>grande</strong> que tiene. 💛
+
     <br><br>
 
     Este Día de las Madres quiero decirles que son el
     <span class="highlight">pilar de la familia</span>,
     ustedes hacen que tantas cosas funcionen y pocas veces es reconocido como se debe.
+
     <br><br>
 
     <strong>Gracias por existir.</strong>
@@ -457,6 +568,7 @@ for(let i=0;i<22;i++){
     Jamás olviden el
     <span class="highlight">mujerón que son</span>:
     inteligentes, independientes, luchadoras y capaces de cualquier cosa.
+
     <br><br>
 
     <span class="big">
@@ -541,7 +653,9 @@ function showCelebration(){
     setTimeout(()=>{
       fw.remove();
     },1600);
+
   }
+
 }
 
 function closeCelebration(){
